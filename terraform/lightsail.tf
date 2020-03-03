@@ -3,10 +3,10 @@ resource "aws_lightsail_key_pair" "test_key_pair" {
 }
 
 resource "aws_lightsail_instance" "lightsail_test" {
-  name              = "wordpress_test"
-  availability_zone = "eu-central-1b"
-  blueprint_id      = "wordpress"
-  bundle_id         = "nano_2_0"
+  name              = var.instance_name
+  availability_zone = var.availability_zone
+  blueprint_id      = var.blueprint_id
+  bundle_id         = var.bundle_id
   key_pair_name     = aws_lightsail_key_pair.test_key_pair.name
   tags = {
     Name = "some name for our resource"
