@@ -33,9 +33,10 @@ output "created_at" {
 output "ip_address" {
   value = aws_lightsail_static_ip.ip.ip_address
 }
-output "public_key" {
+/*output "public_key" {
   value = aws_lightsail_key_pair.test_key_pair.public_key
 }
 output "priv_key" {
   value = aws_lightsail_key_pair.test_key_pair.private_key
 }
+*/
